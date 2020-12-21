@@ -10,21 +10,22 @@
         - htop
         - tmux
         - vim-nox
+        - python3-psutil
 
-   - name: copy wallpaper file
-     copy:
+  - name: copy wallpaper file
+    copy:
        src: files/wallpaper.png
        dest: /usr/share/backgrounds/im-root-wallpaper.jpg
        owner: root
        group: root
 
-   - name: set wallpaper
+  - name: set wallpaper
      become_user: stefan
      dconf:
        key: "/org/gnome/desktop/background/picture-uri"
        value: "'file:///usr/share/backgrounds/im-root-wallpaper.jpg'"
 
-   - name: set wallpaper position
+  - name: set wallpaper position
      become_user: stefan
      dconf:
        key: "/org/gnome/desktop/background/picture-options"
