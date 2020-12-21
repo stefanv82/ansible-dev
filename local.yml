@@ -14,7 +14,7 @@
    - name: copy wallpaper file
      copy:
        src: files/wallpaper.png
-       dest: /usr/share/backgrounds/im-root-wallpaper.png
+       dest: /usr/share/backgrounds/im-root-wallpaper.jpg
        owner: root
        group: root
 
@@ -22,7 +22,7 @@
      become_user: stefan
      dconf:
        key: "/org/gnome/desktop/background/picture-uri"
-       value: "'file:///usr/share/backgrounds/im-root-wallpaper.png'"
+       value: "'file:///usr/share/backgrounds/im-root-wallpaper.jpg'"
 
    - name: set wallpaper position
      become_user: stefan
