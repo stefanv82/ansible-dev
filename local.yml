@@ -35,5 +35,5 @@
     copy:
       src: files/bashrc
       dest: /home/stefan/dotfiles/.bashrc
-        owner: stefan
-        group: stefan
+      owner: stefan
+      group: stefan
